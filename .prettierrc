@@ -1,0 +1,7 @@
+semi: false
+singleQuote: true
+printWidth: 140
+trailingComma: 'none'
+arrowParens: 'avoid'
+endOfLine: 'auto'
+htmlWhitespaceSensitivity: 'ignore' ## 解决右括号前面换行的问题
