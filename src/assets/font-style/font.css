@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'PingFangSC-Regular';
+  src: url('./苹方黑体-准-简.ttf');
+  font-weight: normal;
+  font-size: normal;
+}
+@font-face {
+  font-family: 'PingFangSC-Semibold';
+  src: url('./苹方黑体-中黑-简.ttf');
+  font-weight: normal;
+  font-size: normal;
+}
+@font-face {
+  font-family: 'PingFangSC-Medium';
+  src: url('./苹方黑体-中粗-简.ttf');
+  font-weight: normal;
+  font-size: normal;
+}
+@font-face {
+  font-family: 'PingFangSC-Light';
+  src: url('./苹方黑体-细-简.ttf');
+  font-weight: normal;
+  font-size: normal;
+}

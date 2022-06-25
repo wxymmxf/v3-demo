@@ -16,6 +16,9 @@ import SvgIcon from '@/components/common/SvgIcon.vue' // svg组件
 const req = require.context('@/assets/svgIcons/svg', false, /\.svg$/)
 req.keys().map(req)
 
+// add PingFang font
+import '@/assets/font-style/font.css'
+
 const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)

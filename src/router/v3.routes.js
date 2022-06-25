@@ -26,6 +26,11 @@ export default {
           component: () => import('@v3/demo/Demo1')
         },
         {
+          path: 'framework',
+          name: 'framework',
+          component: () => import('@v3/demo/Framework')
+        },
+        {
           path: 'demo1',
           name: 'demo1',
           component: () => import('@v3/demo/Demo1')

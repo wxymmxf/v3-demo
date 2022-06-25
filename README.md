@@ -16,7 +16,7 @@
   [SvgIcon component](#SvgIcon-component)  
   [Config Svg](#Config-Svg)   
   [Html](#Html)  
-
+[7.Add PingFang Font](#7Add-PingFang-Font)   
 
 
 ## 1.Project create
@@ -163,6 +163,22 @@ module.exports = defineConfig({
 ```
 <svg-icon iconClass="edit" />
 ```
+
+## 7.Add PingFang Font
+main.js  
+```
+import '@/assets/font-style/font.css'
+```
+font.css  
+```
+@font-face {
+  font-family: 'PingFangSC-Regular';
+  src: url('./苹方黑体-准-简.ttf');
+  font-weight: normal;
+  font-size: normal;
+}
+```
+
 ## Project setup
 ```
 npm install

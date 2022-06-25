@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <div>Custom Svg Icon</div>
-    <svg-icon iconClass="edit" />
-  </div>
-  <hr />
+  <div>Demo1</div>
 </template>
 <script>
 export default {
