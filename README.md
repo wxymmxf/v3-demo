@@ -1,11 +1,14 @@
 # v3-demo
 ## Contents
-[1.Project create](#1Project-create)  
-  [presets](#presets)
-  [push project to github](#push-project-to-github)
+[1.Project create](#1Project-create)    
+  [presets](#presets)  
+  [push project to github](#push-project-to-github)  
 [2.Config eslint](#2Config-eslint)   
-  [config prettier](#config-prettier)
-  [config eslint](#config-eslint)
+  [config prettier](#config-prettier)  
+  [config eslint](#config-eslint)  
+[3.Distributed dynamic route](#3Distributed-dynamic-route)  
+  [config alias](#config-alias)  
+  [route files](#route-files)  
 
 ## 1.Project create
 ### presets:  
@@ -46,7 +49,41 @@ package.json
    "vue/multi-word-component-names": "off"
 }
 ```
+## 3.Distributed dynamic route
+modules:  
+```
+src/ele
+src/v3
+```
+### config alias
+vue.config.js  
+```
+module.exports = defineConfig({
+  chainWebpack: config => {
+    config.resolve.alias.set('@', resolve('src'))
+    .set('@v3', resolve('src/modules/v3'))
+    .set('@ele', resolve('src/modules/ele'))
+  }
+})
+```
+### route files
+router/index.js  
+router/ele.routes.js  
+router/v3.routes.js  
+```
+router/index.js:
+const routerList = []
+function importAll(r) {
+  r.keys().forEach(key => {
+    routerList.push(r(key).default)
+  })
+}
+importAll(require.context('./', false, /\.routes.js/))
 
+const routes = [
+  ...routerList
+]
+```
 ## Project setup
 ```
 npm install
