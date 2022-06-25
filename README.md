@@ -10,7 +10,14 @@
   [config alias](#config-alias)  
   [route files](#route-files)  
 [4.Add Element Plus](#4Add-Element-Plus)   
-[5.Init CSS](#5Init-CSS)   
+[5.Init CSS](#5Init-CSS)  
+[6.Custom Svg Icon](#6Custom-Svg-Icon)   
+  [Install](#Install-Svg)  
+  [SvgIcon component](#SvgIcon-component)  
+  [Config Svg](#Config-Svg)   
+  [Html](#Html)  
+
+
 
 ## 1.Project create
 ### presets:  
@@ -112,6 +119,49 @@ src/assets/css/global.scss
 main.js
 ```
 import './assets/css/index.scss'
+```
+## 6.Custom Svg Icon
+### Install Svg
+```
+npm install svg-sprite-loader -D
+```
+### SvgIcon component
+src/components/common/SvgIcon.vue
+```
+<svg :class="svgClass" aria-hidden="true">
+  <use :xlink:href="iconName" />
+</svg>
+```
+### Config Svg
+main.js  
+```
+import SvgIcon from '@/components/common/SvgIcon.vue'
+const req = require.context('@/assets/svgIcons/svg', false, /\.svg$/)
+req.keys().map(req)
+
+app.component('svg-icon', SvgIcon)
+```
+vue.config.js  
+```
+module.exports = defineConfig({
+    config.module.rule('svg').exclude.add(resolve('src/assets/svgIcons')).end()
+    config.module
+      .rule('icons')
+      .test(/\.svg$/)
+      .include.add(resolve('src/assets/svgIcons'))
+      .end()
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({
+        symbolId: 'icon-[name]'
+      })
+      .end()
+  }
+})
+```
+### Html
+```
+<svg-icon iconClass="edit" />
 ```
 ## Project setup
 ```
