@@ -1,0 +1,65 @@
+/* 全局样式表 */
+html,
+body,
+#app {
+  height: 100%;
+  min-width: 1366px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  // font-family: 'PingFangSC-Regular', Arial;
+  // 固定宽度时页面居中
+  // margin: auto;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	// right: 0;
+	// bottom: 0;
+}
+/*滚动条样式*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb { //滑块部分
+  border-radius: 5px;
+  background-color: #D7D7D7;
+}
+::-webkit-scrollbar-track { //轨道部分
+  background: #FAFAFA;
+  border-radius: 5px;
+}
+.flex1 {
+  flex: 1
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.width100 {
+  width: 100%
+}
+// 自定义svg图标默认大小
+.svg-icon {
+  width: 16px;
+  height: 16px;
+}
+/*文字链接样式*/
+.text-link {
+  color: #3268EA;
+  cursor: pointer;
+}
+.text-link:hover {
+  color: #0043CE;
+  background: #E5E5E5;
+}
+/** 阴影边框 */
+.shadow-border {
+  background-image: linear-gradient(180deg, #F3F5F8 50%, #FFFFFF 100%);
+  border: 2px solid #FFFFFF;
+  box-shadow: 4px 4px 20px 0 rgba(2,34,78,0.08);
+  border-radius: 10px;
+}
+

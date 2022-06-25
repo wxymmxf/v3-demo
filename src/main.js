@@ -3,6 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// import global css
+import './assets/css/index.scss'
+
+// import ElementPlus
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'

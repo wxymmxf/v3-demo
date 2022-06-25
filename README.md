@@ -9,6 +9,8 @@
 [3.Distributed dynamic route](#3Distributed-dynamic-route)  
   [config alias](#config-alias)  
   [route files](#route-files)  
+[4.Add Element Plus](#4Add-Element-Plus)   
+[5.Init CSS](#5Init-CSS)   
 
 ## 1.Project create
 ### presets:  
@@ -84,7 +86,7 @@ const routes = [
   ...routerList
 ]
 ```
-## 3.Add Element Plus
+## 4.Add Element Plus
 install  
 ```
 npm install element-plus @element-plus/icons-vue -S
@@ -100,6 +102,16 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
 app.use(ElementPlus)
+```
+## 5.Init CSS
+src/assets/css/index.scss  
+src/assets/css/_reset.scss  
+src/assets/css/diy-element-plus.scss  
+src/assets/css/global.scss  
+
+main.js
+```
+import './assets/css/index.scss'
 ```
 ## Project setup
 ```
