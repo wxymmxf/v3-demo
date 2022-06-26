@@ -19,8 +19,18 @@ req.keys().map(req)
 // add PingFang font
 import '@/assets/font-style/font.css'
 
+// config default element-plus locale
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
+
 const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
-app.component('svg-icon', SvgIcon).use(ElementPlus).use(store).use(router).mount('#app')
+app
+  .component('svg-icon', SvgIcon)
+  .use(ElementPlus, {
+    locale: zhCn
+  })
+  .use(store)
+  .use(router)
+  .mount('#app')

@@ -18,7 +18,8 @@
   [Html](#Html)  
 [7.Add PingFang Font](#7Add-PingFang-Font)   
 [8.A simple el-menu sample](#8A-simple-el-menu-sample)  
-[9.A simple el-table sample](#9A-simple-el-table-sample) 
+[9.A simple el-table sample](#9A-simple-el-table-sample)  
+[10.config default element-plus locale](#10config-default-element-plus-locale)  
 
 ## 1.Project create
 ### presets:  
@@ -186,7 +187,14 @@ component location: src/modules/ele/menu/components/SimpleMenu.vue
 ## 9.A simple el-table sample 
 component location: src/modules/ele/table/components/CommonTable.vue  
 
-
+## 10.config default element-plus locale
+main.js  
+```
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
+app.use(ElementPlus, {
+    locale: zhCn
+  })
+```
 ## Project setup
 ```
 npm install
