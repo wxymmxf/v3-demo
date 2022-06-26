@@ -17,7 +17,7 @@
   [Config Svg](#Config-Svg)   
   [Html](#Html)  
 [7.Add PingFang Font](#7Add-PingFang-Font)   
-
+[8.A simple el-menu sample](#8A-simple-el-menu-sample)  
 
 ## 1.Project create
 ### presets:  
@@ -178,6 +178,10 @@ font.css
   font-size: normal;
 }
 ```
+## 8.A simple el-menu sample
+remember current path and default-openeds when refresh page  
+component location: src/modules/ele/menu/components/SimpleMenu.vue  
+
 
 ## Project setup
 ```
