@@ -1,6 +1,6 @@
 <template>
   <div class="simple-menu">
-    <div>{{ currentMenu }}</div>
+    <div class="title">{{ currentMenu }}</div>
     <el-menu @open="handleOpen" @close="handleClose" :default-openeds="defaultOpeneds">
       <template v-for="(item, index) in menu.children" :key="index">
         <template v-if="item.children && item.children.length > 1">
@@ -83,6 +83,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .simple-menu {
+  .title {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    padding-left: 24px;
+  }
   .menu-item {
     // 定制菜单样式
   }

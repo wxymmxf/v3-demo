@@ -7,12 +7,12 @@ export default {
       path: '',
       name: 'ele-default',
       // redirect: '/ele/menu'
-      component: () => import('@ele/table/TablePage')
+      component: () => import('@ele/table/tablePage/TablePage')
     },
     {
       path: 'table',
       name: 'table',
-      component: () => import('@ele/table/TablePage')
+      component: () => import('@ele/table/tablePage/TablePage')
     },
     {
       path: 'menu',

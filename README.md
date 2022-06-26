@@ -18,6 +18,7 @@
   [Html](#Html)  
 [7.Add PingFang Font](#7Add-PingFang-Font)   
 [8.A simple el-menu sample](#8A-simple-el-menu-sample)  
+[9.A simple el-table sample](#9A-simple-el-table-sample) 
 
 ## 1.Project create
 ### presets:  
@@ -181,6 +182,9 @@ font.css
 ## 8.A simple el-menu sample
 remember current path and default-openeds when refresh page  
 component location: src/modules/ele/menu/components/SimpleMenu.vue  
+
+## 9.A simple el-table sample 
+component location: src/modules/ele/table/components/CommonTable.vue  
 
 
 ## Project setup
